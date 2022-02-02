@@ -323,7 +323,10 @@ figure ul li:hover {
 @media (min-width: 768px) {
   .srvs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(450px, 1fr)
+    );
     grid-gap: 6em 4em;
   }
 }
@@ -331,7 +334,9 @@ figure ul li:hover {
 .srvs .srv {
   display: flex;
   margin-bottom: 3em;
+  padding: 20px;
 }
+
 .srv:hover {
   box-shadow: 20px 20px 40px 0px var(--trans-pragh-clr);
 }
@@ -411,7 +416,10 @@ figure ul li:hover {
 }
 @media (min-width: 992px) {
   .portfolio-items {
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(450px, 1fr)
+    );
   }
 }
 @media (min-width: 1200px) {
@@ -613,8 +621,8 @@ div.packs-price.flex-between > div > div:nth-child(3):hover,
   height: fit-content;
   padding: 15px;
   border-radius: 50%;
-  margin-left: 43%;
-  margin-bottom: 2em;
+  transform: translateX(20px);
+  margin-bottom: 0.5em;
 }
 .stats .count div:nth-child(3) {
   color: white;
@@ -740,6 +748,11 @@ div.packs-price.flex-between > div > div:nth-child(3):hover,
   height: 100%;
   display: block;
   background-color: var(--main-color);
+  transition: var(--transition-time);
+  -webkit-transition: var(--transition-time);
+  -moz-transition: var(--transition-time);
+  -ms-transition: var(--transition-time);
+  -o-transition: var(--transition-time);
 }
 .skills-section .skills .skill div span::before {
   content: attr(data-progress);
